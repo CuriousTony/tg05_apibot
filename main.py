@@ -1,6 +1,9 @@
 from bot_instance import bot, dp
+from handlers import command_handlers
 import asyncio
 import logging
+
+dp.include_routers(command_handlers.router)
 
 
 async def main():
